@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
      */
     private fun rollDice() {
         diceImage.setImageResource(getRandomDiceImage())
-        diceImage2.setImageResource(getRandomDiceImage())
+        diceImage2.setImageResource(getRandomDiceImageb())
     }
 
     private fun getRandomDiceImage() : Int {
@@ -58,6 +58,19 @@ class MainActivity : AppCompatActivity() {
             4 -> R.drawable.dice_4
             5 -> R.drawable.dice_5
             else -> R.drawable.dice_6
+        }
+    }
+    private fun getRandomDiceImageb() : Int {
+        val randomInt = (1..6).random()
+        sum(randomInt)
+
+        return when (randomInt) {
+            1 -> R.drawable.dice_1b
+            2 -> R.drawable.dice_2b
+            3 -> R.drawable.dice_3b
+            4 -> R.drawable.dice_4b
+            5 -> R.drawable.dice_5b
+            else -> R.drawable.dice_6b
         }
     }
 
